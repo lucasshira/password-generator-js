@@ -11,14 +11,14 @@
     <section class="pw-container">
 
         <div class="pw-header">
-            <div class="pw">
+            <div class="pw" id="pw">
                 l823Zs78#Css09@
-                <button>Copy</button>
+                <button id="copy">Copy</button>
             </div>
         </div>
 
         <div class="pw-body">
-            <div class="form-control"><label for="len"></label>Password Length <input id="len" type="number" min="4" max="40"></div>
+            <div class="form-control"><label for="len"></label>Password Length <input id="len" value="20" type="number" min="4" max="40"></div>
             <div class="form-control"><label for="upper"></label>Contain Uppercase Letters <input id="upper" type="checkbox"></div>
             <div class="form-control"><label for="lower"></label>Contain Lowercase Letters <input id="lower" type="checkbox"></div>
             <div class="form-control"><label for="number"></label>Contain Numbers <input id="number" type="checkbox"></div>
@@ -28,6 +28,6 @@
 
     </section>
 
-    <script src="assets/script.js"></script>
+    <script src="assets/script.js" defer></script>
 </body>
 </html>
