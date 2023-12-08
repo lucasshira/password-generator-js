@@ -20,7 +20,7 @@ body {
 .pw-container {
     background-color: rgba(43, 65, 98, 0.664);
     width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .pw-header {
