@@ -15,6 +15,12 @@ This is a simple password generator built using vanilla JavaScript. It allows us
 - **CSS3**
 - **JavaScript**
 
+## Live Demo
+
+Access the live demo [here](https://lucasshira.github.io/password-generator-js/).
+
+This project is hosted on GitHub Pages, allowing you to interact with the password generator directly in your browser.
+
 ## Contributions
 
 Contributions to enhance the functionality or improve the user experience are welcome. Feel free to fork this repository, make changes, and submit pull requests.
