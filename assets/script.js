@@ -29,11 +29,38 @@ function getSymbol() {
 }
 
 function generatePassword() {
-    const len = lenEl.value;
+    let len = parseInt(lenEl.value);
+
+    if (len > 20) {
+        len = 20;
+        lenEl.value = 20;
+    }
 
     let password = '';
+    const allChars = [];
 
-    for (let i = 0; i < len; i++) {
+    if (upperEl.checked) {
+        allChars.push(getUppercase());
+    }
+
+    if (lowerEl.checked) {
+        allChars.push(getLowercase());
+    }
+
+    if (numberEl.checked) {
+        allChars.push(getNumber());
+    }
+
+    if (symbolEl.checked) {
+        allChars.push(getSymbol());
+    }
+
+    if (allChars.length === 0) {
+        pwEl.innerHTML = 'Select at least one character type';
+        return;
+    }
+
+    for (let i = password.length; i < len; i++) {
         const x = generateX();
         password += x;
     }
@@ -60,7 +87,23 @@ function generateX() {
         xs.push(getSymbol());
     }
 
+    if (xs.length === 0) return '';
+
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
 generateEl.addEventListener('click', generatePassword);
+
+copyEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = pwEl.innerText;
+
+    if (!password) return;
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert('Password copied to clipboard');
+});
