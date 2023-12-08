@@ -15,10 +15,6 @@ This is a simple password generator built using vanilla JavaScript. It allows us
 - **CSS3**
 - **JavaScript**
 
-## Live Demo
-
-Access the live demo [here](https://your-username.github.io/password-generator).
-
 ## Contributions
 
 Contributions to enhance the functionality or improve the user experience are welcome. Feel free to fork this repository, make changes, and submit pull requests.
