@@ -105,5 +105,12 @@ copyEl.addEventListener('click', () => {
     textarea.select();
     document.execCommand('copy');
     textarea.remove();
-    alert('Password copied to clipboard');
+    copyEl.innerText = 'Copied to clipboard!';
+    copyToClipboard();
 });
+
+function copyToClipboard() {
+    setTimeout(() => {
+        copyEl.innerText = 'Copy';
+    }, 3000);
+}
